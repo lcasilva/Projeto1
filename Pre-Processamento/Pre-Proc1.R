@@ -222,17 +222,6 @@ table(carros$conserv)
 prop.table(table(carros$conserv)) * 100
 
 
-# Verificando o relacionamento entre 2 variáveis categóricas
-# Criando uma CrossTable
-# Tabelas de contingência fornecem uma maneira de exibir as frequências e 
-# frequências relativas de observações (lembra do capítulo de Estatística?),
-# que são classificados de acordo com duas variáveis categóricas. Os elementos
-# de uma categoria são exibidos através das colunas; os elementos de outra
-# categoria são exibidos sobre as linhas.
-install.packages("gmodels")
-library(gmodels)
-?CrossTable
-CrossTable(x = carros$modelo, y = carros$conserv)
 
 
 
