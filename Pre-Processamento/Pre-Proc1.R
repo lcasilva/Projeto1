@@ -235,41 +235,4 @@ library(gmodels)
 CrossTable(x = carros$modelo, y = carros$conserv)
 
 
-## Teste do Qui-quadrado
 
-# Qui-quadrado, simbolizado por X^2 é um teste de hipóteses que se destina a 
-# encontrar um valor da dispersão para duas variáveis nominais, avaliando a
-# associação existente entre variáveis qualitativas.
-# É um teste não paramétrico, ou seja, não depende dos parâmetros populacionais,
-# como média e variância.
-
-# O princípio básico deste método é comparar proporções, isto é, as possíveis
-# divergências entre as frequências observadas e esperadas para um certo evento.
-# Evidentemente, pode-se dizer que dois grupos se comportam de forma semelhante
-# se as diferenças entre as frequências observadas e esperadas em cada categoria
-# forem muito pequenas, próximas a zero. 
-
-# Ou seja, se a probabilidade é muito baixa, ele fornece fortes evidências de
-# que as duas variáveis estão associadas.
-
-CrossTable(x = carros$modelo, y = carros$conserv, chisq = TRUE)
-chisq.test(x = carros$modelo, y = carros$conserv)
-
-# Trabalhamos com duas hipóteses:
-
-# Hipótese nula (H0): As frequências observadas não são diferentes das frequências
-# esperadas. Não existe diferença entre as frequências (contagens) dos grupos.
-# Portanto, não há associação entre os grupos;
-
-# Hipótese alternativa (Ha): As frequências observadas são diferentes das frequências
-# esperadas, com isso existe diferença entre as frequências.
-# Portanto, há associação entre os grupos.
-
-# Para o exempo em questão, o valor de Chi-Quadrado = 0.15
-# e graus de liberdade (df) = 2
-# Portanto, não há associação entre os grupos
-# O valor alto do p-valor (0.92) confirma esta conclusão.
-
-# O estudo das hipóteses não é usado apenas para resolver problemas de negócio, 
-# mas também pode ser usado durante a análise exploratória para verificar a relação 
-# entre duas ou mais variáveis qualitativas.
