@@ -216,7 +216,3 @@ round(model_transmissao, digits = 1)
 head(carros)
 carros$conserv <- carros$cor %in% c("Preto", "Cinza", "Prata", "Branco")
 head(carros)
-
-# Checando a variável
-table(carros$conserv)
-prop.table(table(carros$conserv)) * 100
