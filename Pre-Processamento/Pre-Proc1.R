@@ -220,8 +220,3 @@ head(carros)
 # Checando a variável
 table(carros$conserv)
 prop.table(table(carros$conserv)) * 100
-
-
-
-
-
